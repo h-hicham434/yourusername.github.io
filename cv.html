@@ -3,64 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>السيرة الذاتية | هشام</title>
+    <title>السيرة الذاتية الاحترافية | هشام</title>
     <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2b6cb0;
+            --text-color: #2d3748;
+            --bg-color: #f7fafc;
+        }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
         .cv-container {
-            max-width: 700px;
+            max-width: 800px;
             background: white;
-            margin: 20px auto;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-top: 8px solid var(--primary-color);
         }
-        h1 { color: #0056b3; margin-bottom: 5px; }
-        h2 { color: #333; border-bottom: 2px solid #0056b3; padding-bottom: 5px; margin-top: 25px; }
-        .job-title { font-weight: bold; color: #666; }
-        .company { color: #0056b3; font-weight: bold; }
-        .date { float: left; color: #999; font-size: 14px; }
-        ul { padding-right: 20px; }
-        li { margin-bottom: 8px; }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+        .header h1 {
+            color: var(--primary-color);
+            margin: 0 0 10px 0;
+            font-size: 32px;
+        }
+        .header p {
+            margin: 5px 0;
+            color: #4a5568;
+            font-size: 16px;
+        }
+        .job-title {
+            font-size: 20px !important;
+            font-weight: bold;
+            color: var(--secondary-color) !important;
+        }
+        h2 {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #edf2f7;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        .experience-item {
+            margin-bottom: 20px;
+        }
+        .company-name {
+            font-weight: bold;
+            color: var(--secondary-color);
+            font-size: 16px;
+        }
+        .duration {
+            float: left;
+            color: #718096;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        ul {
+            padding-right: 20px;
+            margin-top: 5px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 10px;
+        }
+        .skill-tag {
+            background-color: #ebf8ff;
+            color: #2b6cb0;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
 <div class="cv-container">
-    <h1>هشام</h1>
-    <p class="job-title">محترف في مجال اللوجستيك وإدارة المستودعات</p>
-    <p>البريد الإلكتروني: hicham.machnak@gmail.com</p>
+    <div class="header">
+        <h1>هشام</h1>
+        <p class="job-title">إطار لوجيستيكي متخصص في إدارة العمليات المستودعية</p>
+        <p>📧 hicham.machnak@gmail.com | 📍 الدار البيضاء، المغرب</p>
+    </div>
 
     <h2>الخبرات المهنية</h2>
     
-    <div>
-        <span class="date">2023 - الحالي</span>
-        <p class="company">إدارة العمليات اللوجستية</p>
+    <div class="experience-item">
+        <span class="duration">3 سنوات من الخبرة التشغيلية</span>
+        <p class="company-name">مسار مهني حافل في اللوجستيك (Timar / Log's)</p>
         <ul>
-            <li>إدارة عمليات الاستلام، التخزين، والتحضير (Picking) بكفاءة عالية وفقاً لمعايير الجودة.</li>
-            <li>تنظيم وتوزيع المهام داخل المستودع لتحسين إنتاجية العمل وسرعة تلبية الطلبيات.</li>
-            <li>قيادة الرافعات الشوكية بمهارة مع الالتزام التام بقواعد السلامة المهنية.</li>
+            <li>إشراف متكامل على تدفق السلع من مرحلة الاستلام (Réception) وحتى التدقيق والـ Dispatch والترتيب النهائي بالمستودع.</li>
+            <li>تحسين كفاءة سلاسل الإمداد ومعدلات التحضير (Picking Efficiency) مع تقليص الهدر والوقت المستغرق في معالجة الطلبيات.</li>
+            <li>تنسيق دقيق للمخزون ومراقبة جودة المدخلات والمخرجات بالتعاون مع فرق الشحن والتوزيع.</li>
+            <li>قيادة آمنة واحترافية للرافعات الشوكية في بيئات عمل ديناميكية وعالية الضغط.</li>
         </ul>
     </div>
 
     <h2>المهارات الاحترافية</h2>
-    <ul>
-        <li>تحسين مساحات التخزين وترتيب المواد ذات التدوير السريع.</li>
-        <li>إدارة المخزون والتنسيق بين أقسام الشحن والاستلام.</li>
-        <li>العمل الجماعي والقدرة على حل المشكلات التشغيلية بسرعة.</li>
-    </ul>
+    <div class="skills-grid">
+        <div class="skill-tag">إدارة المستودعات (WMS)</div>
+        <div class="skill-tag">تحسين عمليات الـ Picking</div>
+        <div class="skill-tag">تخطيط مساحات التخزين</div>
+        <div class="skill-tag">مراقبة وإدارة المخزون</div>
+        <div class="skill-tag">سياقة الرافعات الشوكية</div>
+        <div class="skill-tag">إدارة العمليات (Dispatch)</div>
+    </div>
 
-    <h2>التعليم والشهادات</h2>
-    <ul>
-        <li>شهادة الماستر في التدبير وإدارة الأعمال.</li>
-        <li>شهادة سياقة الرافعات الشوكية (Forklift Operator Certification).</li>
-    </ul>
+    <h2>التعليم والمؤهلات</h2>
+    <div class="experience-item">
+        <ul>
+            <li><strong>شهادة الماستر (Master's Degree):</strong> في التدبير وإدارة الأعمال واللوجستيك.</li>
+            <li><strong>شهادة سياقة الرافعات الشوكية (Forklift Operator Certification):</strong> سائق كلارك معتمد.</li>
+        </ul>
+    </div>
 </div>
 
 </body>
